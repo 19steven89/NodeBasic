@@ -6,9 +6,3 @@ module.exports.addNote = () => {
   console.log("in addNote Function");
   return "New Note";
 };
-
-module.exports.add = (a, b) => {
-  var c = a + b;
-  return c;
-
-}

@@ -1,0 +1,22 @@
+{
+  "name": "nodenotes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/19steven89/NodeBasic.git"
+  },
+  "author": "Steven Barry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/19steven89/NodeBasic/issues"
+  },
+  "homepage": "https://github.com/19steven89/NodeBasic#readme",
+  "dependencies": {
+    "lodash": "^4.17.5"
+  }
+}

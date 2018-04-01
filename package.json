@@ -1,11 +1,11 @@
 {
-  "name": "nodenotes",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "name": "nodenotes",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/19steven89/NodeBasic.git"
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/19steven89/NodeBasic#readme",
   "dependencies": {
-    "lodash": "^4.17.5"
+    "lodash": "^4.17.5",
+    "yargs": "^4.7.1"
   }
 }

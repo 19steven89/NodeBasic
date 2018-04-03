@@ -45,7 +45,9 @@ var getAll = () => {
 };
 
 var getNote = (title) => {
-  console.log("getting note", title);
+  var notes = fetchNotes();
+  var read = notes.filter((note) => note.title === title);
+  return read[0];
 };
 
 var removeNote = (title) => {
@@ -59,11 +61,19 @@ var removeNote = (title) => {
   return notes.length !== remove.length;
 
 };
+
+var logNote = (note) =>{
+  console.log("---");
+  console.log(`Title: ${note.title}`);
+  console.log(`Body: ${note.body}`);
+};
+
 //set add note = addNote function above meaning the function can be called from
 //the app class
 module.exports = {
   addNote: addNote,
   getAll: getAll,
   getNote: getNote,
-  removeNote: removeNote
+  removeNote: removeNote,
+  logNote: logNote
 };

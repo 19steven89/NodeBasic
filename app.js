@@ -1,7 +1,5 @@
 //package JSON file is created by using npm init from terminal
 
-console.log("starting app.js");
-
 const fs = require('fs');
 const _ = require('lodash');
 const yargs = require('yargs');
@@ -12,9 +10,8 @@ const argv = yargs.argv;
 
 //get 3rd argument from cli for processing below using yargsA
 var command = argv._[0];
-console.log("Command: ", command);
-console.log("Yargs: ", argv);
-
+// console.log("Command: ", command);
+// console.log("Yargs: ", argv);
 
 if(command === "add"){
   var note = notes.addNote(argv.title, argv.body);
@@ -26,7 +23,13 @@ if(command === "add"){
   }
 
 }else if(command === "list"){
-  notes.getAll();
+    var allNotes = notes.getAll();
+    console.log(`Printing ${allNotes.length} notes(s)`);
+
+    allNotes.forEach((note) =>{
+      notes.logNote(note);
+    });
+
 }else if(command === "read"){
   var readNote = notes.getNote(argv.title);
   if(readNote){

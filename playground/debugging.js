@@ -24,3 +24,7 @@ console.log(person);
 //use repl command followed by note to print the array note value passed in
 
 //***very useful debuggin tool***
+
+//when using chrome dev tools
+//used node --inspect-brk app.js read --title="to buy" as as e.g.
+//input this in the command line and can then step through the code in chrome!

@@ -6,9 +6,39 @@ const yargs = require('yargs');
 const notes = require('./notes.js');
 
 
-const argv = yargs.argv;
+const titleUtility = {
+  describe: "Title of note",
+  demand: true,
+  alias: 't'
+};
 
-//get 3rd argument from cli for processing below using yargsA
+const bodyUtility = {
+  describe: "Body of note",
+  demand: true,
+  alias: 'b'
+};
+
+//the npm yargs lets us access useful CLI commands
+//help() can be used in the cli to run a help menu for this app
+// with: node app.js add --help
+const argv = yargs.command('add', 'Add a new note', {
+  //functionality added to force user to enter a title name
+  //alias used to save user putting title when running program
+  //can now use node app.js add -t="Flag title"
+  title: titleUtility,
+  body: bodyUtility
+  })
+  .command('list', 'list all notes')
+  .command('read', 'read a note',{
+      title: titleUtility,
+})
+  .command('remove', 'remove a note',{
+      title: titleUtility
+})
+.help()
+.argv;
+
+//get 3rd argument from cli for processing below using yargs
 var command = argv._[0];
 // console.log("Command: ", command);
 // console.log("Yargs: ", argv);

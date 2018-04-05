@@ -1,3 +1,15 @@
+//to run node app with vaious commands use
+//node app.js --help   to list all commands that can be used with app.js
+//node app.js read -t="to by"     to read a note with title to buy
+//node app.js list                list all notes saved in the array
+//node app.js add -t="get" -b="car"   add a new note with body and title
+//node app.js remove -t="get"         remove a note with the title "get"
+
+
+
+
+
+
 var person = {
   name: "steven"
 };
